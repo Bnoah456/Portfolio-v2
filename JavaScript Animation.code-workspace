@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../js page animation #1"
+		},
+		{
+			"path": "../js page animation #2"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "js page animation #3"
+	}
+}
