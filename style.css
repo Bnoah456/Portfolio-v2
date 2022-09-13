@@ -89,8 +89,8 @@ section{
 
 .headline{
     position: absolute;
-    top: 43%;
-    left: 28%;
+    top:13%;
+    left: 8%;
     font-size: 60px;
     transform: translate(-20%, -70%);
     color: white;
@@ -99,8 +99,8 @@ section{
 }
 .headline2{
     position: absolute;
-    top: 50%;
-    left: 32%;
+    top: 21%;
+    left: 8%;
     font-size: 23px;
     transform: translate(-20%, -70%);
     color: white;
@@ -149,5 +149,84 @@ section{
     }
     .nav-menu.active{
         left: 0;
+    }
+
+    .headline{
+        position: absolute;
+        top: 15%;
+        left: 7%;
+        font-size: 40px;
+        transform: translate(-20%, -70%);
+        color: white;
+        z-index: 3;
+    
+    }
+    .headline2{
+        position: absolute;
+        top: 25%;
+        left: 7%;
+        font-size: 18px;
+        transform: translate(-20%, -70%);
+        color: white;
+        z-index: 3;
+    
+    }
+}
+
+@media(max-width:393px){
+
+    #logo{
+        grid-column: 2/3;
+        font-size: 23px;
+    } 
+
+    .hamburger{
+        padding-left: 200px;
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        flex-direction:row;
+        width: 100%;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    .headline{
+        position: absolute;
+        top: 15%;
+        left: 7%;
+        font-size: 30px;
+        transform: translate(-20%, -70%);
+        color: white;
+        z-index: 3;
+    
+    }
+    .headline2{
+        position: absolute;
+        top: 25%;
+        left: 7%;
+        font-size: 17px;
+        transform: translate(-20%, -70%);
+        color: white;
+        z-index: 3;
+    
     }
 }
