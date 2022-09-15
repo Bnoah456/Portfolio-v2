@@ -15,7 +15,7 @@ tl.fromTo(hero,1, {height: "0%"}, {height: "80%", ease: Power2.easeInOut})
 
 .fromTo(headline2, 1, {opacity: 0, x:10}, {opacity: 1, x:0}, "-=0.3");
 
-//added a toggle hamburger menu icon//
+//added a toggle hamburger menu icon//////////////////////
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -28,3 +28,22 @@ document.querySelectorAll('.nav-link').forEach(n => n. addEventListener('click',
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
 }))
+
+////////////////////////////////////////////////////
+
+function scrollAppear()
+{
+    var introText = document.querySelector('.intro-text');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.5;
+    
+    if(introPosition < screenPosition){
+        introText.classList.add('intro-appear');
+    }
+
+    if(introPosition > screenPosition){
+        introText.classList.remove('intro-appear');
+    }
+}
+
+window.addEventListener('scroll', scrollAppear);
