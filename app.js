@@ -33,9 +33,14 @@ document.querySelectorAll('.nav-link').forEach(n => n. addEventListener('click',
 
 function scrollAppear()
 {
+   // var section = document.querySelector('.section-3');
+    var middleText = document.querySelector('.middle-text');
     var introText = document.querySelector('.intro-text');
+
+    var middlePosition = middleText.getBoundingClientRect().top;
     var introPosition = introText.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight / 1.5;
+
+    var screenPosition = window.innerHeight / 2.2;
     
     if(introPosition < screenPosition){
         introText.classList.add('intro-appear');
@@ -44,6 +49,16 @@ function scrollAppear()
     if(introPosition > screenPosition){
         introText.classList.remove('intro-appear');
     }
+
+    if(middlePosition < screenPosition){
+        middleText.classList.add('intro-appear');
+    }
+
+    if(middlePosition > screenPosition){
+        middleText.classList.remove("intro-appear");
+    }
+    
 }
+
 
 window.addEventListener('scroll', scrollAppear);
